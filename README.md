@@ -16,25 +16,27 @@ collections:
 
 :radio_button:typing: Kodun daha anlaşılır ve okunabilir olması için tip belirteçleri (Type Hints) olarak ekledik.
 
-##BFS Algoritması(En az aktarmalı rota) Nasıl Çalışır?
+## BFS Algoritması(En az aktarmalı rota) Nasıl Çalışır?
 :black_square_button:BFS (Genişlik Öncelikli Arama) algoritması, graf yapılarında en kısa yolları bulmak için kullanılır.
 
 :black_square_button:Metro ağını bir graf olarak düşünürsek, BFS algoritması bir istasyondan başlayarak bütün istasyonları katman katman gezer ve hedef istasyona ulaşan en az durak değiştirmeli rotayı bulur.
 
-##Kullanmamızın Nedeni: 1.En az aktarmalı rota bulunurken kenar ağırlıkları (yani süreler) dikkate alınmaz.
+## Kullanmamızın Nedeni: 
+                        1.En az aktarmalı rota bulunurken kenar ağırlıkları (yani süreler) dikkate alınmaz.
                         2.BFS, ağırlıksız graf yapılarında en kısa yolu garantili olarak bulur.
 
-##A Algoritması (En Hızlı Rota)* Nasıl Çalışır?
+## A Algoritması (En Hızlı Rota)* Nasıl Çalışır?
 :black_square_button:A algoritması*, hedefe en hızlı ulaşan yolu bulmak için kullanılır.
 :black_square_button:A* algoritması f(n) = g(n) + h(n) formülüyle çalışır:
 :large_orange_diamond:g(n): Başlangıçtan mevcut noktaya kadar olan toplam süre.
 :large_orange_diamond:h(n): Hedefe tahmini uzaklık (burada h(n) = 0 olarak kabul edilmiştir, çünk kesin süre hesaplanıyor).
-##Kullanmamızın Nedeni: 1.:triangular_flag_on_post:Metro ağındaki kenar ağırlıkları gerçek süreleri temsil ettiği için A* algoritması uygun bir                          tercih olmuştur.
-                        2.:triangular_flag_on_post:Dijkstra algoritması gibi diğer en kısa yol algoritmalarından daha verimli çalıştığı için                             tercih edilmiştir.
+## Kullanmamızın Nedeni: 
+                        1.:triangular_flag_on_post:Metro ağındaki kenar ağırlıkları gerçek süreleri temsil ettiği için A* algoritması uygun bir tercih olmuştur.
+                        2.:triangular_flag_on_post:Dijkstra algoritması gibi diğer en kısa yol algoritmalarından daha verimli çalıştığı için tercih edilmiştir.
 
 
-#Test senaryosu örneğine bakalım:
-##Senaryo 1: AŞTİ'dan OSB'ye
+# Test senaryosu örneğine bakalım:
+## Senaryo 1: AŞTİ'dan OSB'ye
 
 <pre>rota = metro.en_az_aktarma_bul("M1", "K4")
 if rota:
@@ -46,7 +48,7 @@ if test_sonuc:
     print(f"En hızlı rota ({sure} dakika):", " -> ".join(i.ad for i in rota)) </pre>
 
 
-##Beklenen Çıktı:
+## Beklenen Çıktı:
 
 :triangular_flag_on_post:En az aktarmalı rota: AŞTİ -> Kızılay -> Ulus -> Demetevler -> OSB
 
