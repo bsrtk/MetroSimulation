@@ -36,17 +36,18 @@ collections:
 #Test senaryosu örneğine bakalım:
 ##Senaryo 1: AŞTİ'dan OSB'ye
 
-<pre>```rota = metro.en_az_aktarma_bul("M1", "K4")
+<pre>rota = metro.en_az_aktarma_bul("M1", "K4")
 if rota:
     print("En az aktarmalı rota:", " -> ".join(i.ad for i in rota))
 
 test_sonuc = metro.en_hizli_rota_bul("M1", "K4")
 if test_sonuc:
     rota, sure = test_sonuc
-    print(f"En hızlı rota ({sure} dakika):", " -> ".join(i.ad for i in rota))``` </pre>
+    print(f"En hızlı rota ({sure} dakika):", " -> ".join(i.ad for i in rota)) </pre>
 
 
 ##Beklenen Çıktı:
+
 :triangular_flag_on_post:En az aktarmalı rota: AŞTİ -> Kızılay -> Ulus -> Demetevler -> OSB
 
 :triangular_flag_on_post:En hızlı rota (XX dakika): AŞTİ -> Kızılay -> Demetevler -> OSB
